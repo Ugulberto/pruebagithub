@@ -7,7 +7,19 @@
 </head>
 <body>
     <div>
-        <p>Hola</p>
+        <p class="text">Hola</p>
     </div>
+    <script>
+        window.onload = function() {
+            function sleep(delay) {
+                let start = new Date().getTime();
+                while (new Date().getTime() < start + delay);
+            }
+            let text = document.querySelector(".text");
+            for (let i = 0; i < 10; i++) {
+                text.innerHTML = i;
+            }
+        }
+    </script>
 </body>
 </html>
